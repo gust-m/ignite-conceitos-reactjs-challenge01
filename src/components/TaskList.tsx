@@ -22,6 +22,7 @@ const TaskList: React.FC = () => {
         title: newTaskTitle,
         isComplete: false,
       }
+      setNewTaskTitle('');
       setTasks([...tasks, newTask]);
     }
   }, [tasks, newTaskTitle]);
