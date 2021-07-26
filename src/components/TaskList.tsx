@@ -36,7 +36,6 @@ const TaskList: React.FC = () => {
           title,
           isComplete: !isComplete,
         }
-        console.log(selectedTask);
         return selectedTask;
       } else {
         return task;
@@ -46,7 +45,7 @@ const TaskList: React.FC = () => {
   }, [tasks]);
 
   const handleRemoveTask = useCallback((id: number) => {
-    const newArrayTasks = tasks.filter(taks => taks.id !== id);
+    const newArrayTasks = tasks.filter(task => task.id !== id);
     
     setTasks(newArrayTasks);
   }, [tasks]);
